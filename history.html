@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut Icon" type="image/x-icon" href="heartBeat.png" />
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>行動智慧照護-生醫保鏢</title>
+    <style type="text/css">
+        .header {
+            display: flex;
+            padding: 0px 10px;
+            background-color: #000000;
+        }
+
+        .header .logo {
+            display: inline-block;
+            padding: 6px 0;
+        }
+
+        .header nav {
+            text-align: right;
+            width: 100%;
+            font-size: 0;
+        }
+
+        .header nav a {
+            font-size: 16px;
+            color: #ffffff;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 52px;
+            padding: 0 10px;
+        }
+
+        .header nav a:hover {
+            background-color: #ffaa00;
+        }
+
+        .page {
+            text-align: center;
+        }
+
+
+        .anchors {
+            background-color: #46A3FF;
+            opacity: 70%;
+            width: 180px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 20px;
+            display: inline-block;
+            position: fixed;
+            top: 40px;
+            left: -10px;
+        }
+
+        .path li {
+            padding: 10px 20px;
+            border-bottom: 1px solid;
+        }
+
+        .path li:hover {
+            background-color: #FFA042;
+            font-weight: bold;
+        }
+
+        .path li a {
+            color: #000;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        h1{
+            font-size: 72px;
+            padding: 40px;
+        }
+        .content {
+            width: 960px;
+            margin: auto;
+        }
+
+        .content h3 {
+            font-size: 36px;
+        }
+
+        .content p {
+            font-size: 24px;
+        }
+
+        hr {
+            height: 2px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <a href="#" class="logo"><img src="heartBeat01.png" alt="行動智慧照護-生醫保鏢"></a>
+        <nav>
+            <a href="mobileCare.html">即時感測</a>
+            <a href="history.html">歷史紀錄</a>
+            <a href="explain.html">使用說明書</a>
+            <a href="aboutour02.html">關於我們</a>
+            <a href="contact.html">聯絡我們</a>
+        </nav>
+    </div>
+
+    <div class="page">
+        <div class="anchors">
+            <ul class="path">
+                <li><a href="#block1">心跳區間</a></li>
+                <li><a href="#block2">體溫感測</a></li>
+                <li><a href="#block3">膚電感測</a></li>
+                <li><a href="#block4">右腳三軸感測</a></li>
+                <li><a href="#block5">左腳三軸感測</a></li>
+                <li><a href="#block6">遠距即時監控</a></li>
+            </ul>
+        </div>
+        <h1>生醫保鏢-歷史紀錄</h1>
+        <div class="content">
+            <div class="block block1" id="block1">
+                <h3>心跳區間</h3>
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;
+                " src="https://thingspeak.com/channels/1144174/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+            </div>
+            <div class="block block2" id="block2">
+                <h3>體溫感測</h3>
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1144174/widgets/241743"></iframe>
+                <p>正常值: 32度正負3度</p>
+                <p id="value2"></p>
+            </div>
+            
+            <div class="block block4" id="block4">
+                <h3>膚電感測</h3>
+                
+                <p>人緊張時會響起警報</p>
+                <p id="value4"></p>
+            </div>
+            <div class="block block5" id="block5">
+                <h3>右腳三軸感測感測</h3>
+                <div class="wrap">
+                    <div class="item"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1144174/widgets/239117"></iframe>
+                    </div>
+                    <div class="item"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1144174/widgets/239118"></iframe>
+                    </div>
+                    <div class="item"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1144174/widgets/239119"></iframe>
+                    </div>
+                </div>
+                <p>偵測有無摔倒</p>
+                <p id="value2"></p>
+            </div>
+            <div class="block block6" id="block6">
+                <h3>左腳三軸感測感測</h3>
+                <div class="wrap">
+                    <div class="item"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1144174/widgets/239117"></iframe>
+                    </div>
+                    <div class="item"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1144174/widgets/239118"></iframe>
+                    </div>
+                    <div class="item"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1144174/widgets/239119"></iframe>
+                    </div>
+                </div>
+                <p>偵測有無摔倒</p>
+                <p id="value2"></p>
+            </div>
+            <div class="block block6" id="block6">
+                <h3>遠距即時監控</h3>
+                <iframe src="http://192.168.0.30:8000"
+                width="450" height="260" scrolling="no" frameborder="1">
+                </iframe>
+                <p>可以遠距且即時地知道老人當時的狀況。</p>
+                <p id="value3"></p>
+            </div>
+
+            <hr>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                value4  corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eaque necessitatibus nesciunt error.
+                Blanditiis
+                maxime asperiores dolorem corporis eos magni laudantium ducimus cupiditate eaque nihil eius, ipsam
+                nulla
+                dolorum, eum quam sapiente repellat ea nam velit veritatis sunt. Iure, temporibus.</p>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $.getJSON("https://thingspeak.com/channels/1144174/feeds/last.json?key=YQ1GT7RN65KCY9TH", function (data) {
+                    $("#value1").html("<p>日期:" + data.created_at + "</p>" + "<p>" + data.field1 + "</p>")
+                });
+            });
+        });
