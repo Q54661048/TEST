@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut Icon" type="image/x-icon" href="heartBeat.png" />
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>行動智慧照護-生醫保鏢</title>
+    <style type="text/css">
+        .header {
+            display: flex;
+            padding: 0px 10px;
+            background-color: #000000;
+        }
+
+        .header .logo {
+            display: inline-block;
+            padding: 6px 0;
+        }
+
+        .header nav {
+            text-align: right;
+            width: 100%;
+            font-size: 0;
+        }
+
+        .header nav a {
+            font-size: 16px;
+            color: #ffffff;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 52px;
+            padding: 0 10px;
+        }
+
+        .header nav a:hover {
+            background-color: #ffaa00;
+        }
+
+        .page {
+            text-align: center;
+        }
+
+
+        .anchors {
+            background-color: #46A3FF;
+            opacity: 70%;
+            width: 180px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 20px;
+            display: inline-block;
+            position: fixed;
+            top: 40px;
+            left: -10px;
+        }
+
+        .path li {
+            padding: 10px 20px;
+            border-bottom: 1px solid;
+        }
+
+        .path li:hover {
+            background-color: #FFA042;
+            font-weight: bold;
+        }
+
+        .path li a {
+            color: #000;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        h1{
+            font-size: 72px;
+            padding: 40px;
+        }
+        .content {
+            width: 960px;
+            margin: auto;
+        }
+
+        .content h3 {
+            font-size: 36px;
+        }
+
+        .content p {
+            font-size: 24px;
+        }
+
+        hr {
+            height: 2px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <a href="#" class="logo"><img src="heartBeat01.png" alt="行動智慧照護-生醫保鏢"></a>
+        <nav>
+            <a href="mobileCare.html">即時感測</a>
+            <a href="history.html">歷史紀錄</a>
+            <a href="explain.html">使用說明書</a>
+            <a href="aboutour02.html">關於我們</a>
+            <a href="contact.html">聯絡我們</a>
+        </nav>
+    </div>
+
+    <div class="page">
+        <div class="anchors">
+            <ul class="path">
+                <li><a href="#block1">心跳&體溫&膚電感測模組</a></li>
+                <li><a href="#block2">6軸陀螺儀/加速度模組(手部)</a></li>
+                <li><a href="#block3">三軸陀螺儀模組(右腳)</a></li>
+                <li><a href="#block4">6軸陀螺儀/加速度模組(左腳)</a></li>
+                <li><a href="#block5">樹莓派主機</a></li>
+                <li><a href="#block6">樹梅派相機監控模組</a></li>
+            </ul>
+        </div>
+        <h1>生醫保鏢-使用說明書</h1>
+        <div class="content">
+            <div class="block block1" id="block1">
+                <h3>心跳&體溫</h3>
+                <img src="c5.jpg"> 
+                <p>體溫:體溫:偵測環境中所生事件或變化，並將此訊息傳送出至其他電子裝置（如中央處理器）的裝置，通常由感測元件和轉換元件組成。
+                    膚電:GSR通過測量皮膚電流反應來測量皮膚電導率。強烈的情緒會刺激你的交感神經系統，
+                    導致汗腺分泌更多的汗水.Grove – GSR允許您通過簡單地將兩個電極連接到兩個手指來發現這種強烈的情緒，
+                    它能夠製作與情感有關的項目（如睡眠質量監視器），是一個很有趣的裝備。
+                </p>
+            </div>
+            <div class="block block2" id="block2">
+                <h3>膚電感測模組</h3>
+                <img src="c5.jpg">
+                <p>預防、提早發現在天氣炎熱、穿衣過厚、情緒激動、勞動奔走，或是喝熱湯等情況下， 出汗量增加皆屬於正常現象。不過，由於出汗量增多、口渴喜涼， 因此常會「傷氣」，容易覺得疲倦；
+                    還會「傷陰」，口乾、咽乾，喝了水還是不舒服。此外，有些人還會出現胸悶、胃脹、吃不下飯等狀況，。</p>
+                <p id="value2"></p>
+            </div>
+            <div class="block block3" id="block3">
+                <h3>三軸陀螺儀模組(右腳)</h3>
+                <img src="c3.jpg">
+                <p>跌倒會觸發蜂鳴器,在正常情況下亮綠燈<br>。</p>
+                <p id="value3"></p>
+            </div>
+            <div class="block block4" id="block4">
+                <h3>6軸陀螺儀/加速度模組(左腳)</h3>
+                <img src="https://fakeimg.pl/350x200/ff0000/000">
+                <p>跌倒會觸發蜂鳴器,在正常情況下亮綠燈<br>L3G4200D三軸數位陀螺儀感測器 角速度模組 GY-50
+                    L3G4200D三軸數位陀螺儀感測器 低功耗三軸角速率傳感器的分線板。L3G4200D 是一款MEMS運動傳感器，滿量程為±250 /±500 /±2000 dps，
+                    能夠通過用戶可選帶寬測量速率。這些在遊戲和虛擬現實輸入設備，GPS導航系統和機器人技術方面非常有用。</p>
+                <p id="value4"></p>
+            </div>
+            <div class="block block5" id="block5">
+                <h3>樹莓派主機</h3>
+                <img src="https://fakeimg.pl/350x200/ff0000/000">
+                <p>接收資料,傳送資料</p>
+                <p id="value2"></p>
+            </div>
+            <div class="block block6" id="block6">
+                <h3>樹梅派相機監控模組</h3>
+                <img src="https://fakeimg.pl/350x200/ff0000/000">
+                <p>此款產品為Raspberry Pi Camera Module (樹莓派普通攝像頭），高清500萬像素，與樹莓派完美相融！支持1080p/720p/640x480p視頻，
+                    尺寸25mm x 24mm x 9mm，定焦透鏡， CSi接口。靜止圖像分辨率2592 x 1944。記錄頻率為30fps。<br>
+                照護著可使用手機或電腦,透過透過"http://192.168.0.30:8000",透過遠端知道使用著的狀況。
+                </p>
+                <p id="value2"></p>
+            </div>
+
+            <hr>
+
+            
+        </div>
+
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $.getJSON("https://thingspeak.com/channels/1144174/feeds/last.json?key=YQ1GT7RN65KCY9TH", function (data) {
+                    $("#value1").html("<p>日期:" + data.created_at + "</p>" + "<p>" + data.field1 + "</p>")
+                });
+            });
+        });
